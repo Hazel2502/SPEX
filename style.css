@@ -185,3 +185,29 @@ footer { background:#111;color:var(--color-muted);text-align:center;padding:20px
   .hero-title { font-size:2rem;white-space:normal; }
 }
 
+/* Bienvenida en dos columnas */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.horario-card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  color: var(--color-light);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.horario-card:hover {
+  transform: translateY(-5px);
+}
+
+.horario-card h3 {
+  color: var(--color-green);
+  margin-bottom: 15px;
+}
