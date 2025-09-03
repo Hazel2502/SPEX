@@ -121,49 +121,35 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
 }
 
 /* ================================
-   Beneficios (Nosotros)
+   Beneficios y Nuestro Equipo (cuadros iguales)
 ================================ */
-.services-grid {
+.services-grid,
+.team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
   gap: 30px;
   justify-items: center;
 }
 
-.service-card {
+.service-card,
+.team-card {
   background: #1a1a1a;
-  border: 2px solid var(--color-orange);
+  border: 2px solid var(--color-orange); /* borde naranja */
   border-radius: 12px;
   padding: 25px;
   text-align: center;
   transition: .3s;
-  min-height: 180px; /* todos del mismo tamaño */
+  width: 100%;
+  min-height: 180px; /* mismo alto para todos */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
-
-.service-card:hover {
+.service-card:hover,
+.team-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
 }
-
-.service-card .icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.service-card h3 {
-  color: var(--color-green);
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  color: var(--color-muted);
-}
-
 
 /* ================================
    Imágenes de equipo
@@ -275,3 +261,4 @@ footer { background:#111;color:var(--color-muted);text-align:center;padding:20px
 .bienvenida-card { background:#111;border:2px solid #00bfff;border-radius:12px;padding:25px;box-shadow:0 0 20px rgba(0,191,255,.2); }
 .bienvenida-card h3 { color: var(--color-green);margin-bottom:15px; }
 .bienvenida-card p { margin-bottom:8px;color: var(--color-light); }
+
