@@ -135,7 +135,7 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   object-fit: contain;    
   display: block;
   margin: 0 auto 15px;    
-  background: #0d0d0d;    
+  background: #000;    
   border-radius: 8px;     
   padding: 10px; 
 }
