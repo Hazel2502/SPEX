@@ -151,6 +151,44 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
 }
 
+
+/* ================================
+   Beneficios en 2 columnas
+================================ */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* SIEMPRE 2x2 */
+  gap: 30px;
+  justify-items: center;
+  margin-bottom: 60px;
+}
+
+.benefit-card {
+  background: #1a1a1a;
+  border: 2px solid var(--color-orange);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: .3s;
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+.benefit-card .icon {
+  font-size: 2rem; /* tamaño grande */
+  display: block;
+  margin-bottom: 12px;
+}
+
 /* ================================
    Imágenes de equipo
 ================================ */
