@@ -198,14 +198,14 @@ footer { background:#111;color:var(--color-muted);text-align:center;padding:20px
 .bienvenida-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
-  color: var (--color-green); /* verde aqua */
+  color: var(--color-green); /* verde aqua */
   margin-bottom: 20px;
 }
 
 .bienvenida-texto p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--color-light);
+  color: var(--color-green);
 }
 
 .text-green { color: var(--color-green); font-weight: 600; }
