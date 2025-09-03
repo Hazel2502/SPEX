@@ -119,6 +119,34 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
 .team-card p { color:var(--color-muted);font-size:.9rem; }
 
 /* ================================
+   Nosotros - Beneficios
+================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;  /* más espacio entre los cuadros */
+  justify-items: center;
+}
+
+/* ================================
+   Nosotros - Nuestro Equipo
+================================ */
+.subsection-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 60px 0 30px;
+  color: var(--color-green);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+
+/* ================================
    Servicios
 ================================ */
 .services-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px; }
