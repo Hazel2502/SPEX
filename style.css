@@ -121,35 +121,49 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
 }
 
 /* ================================
-   Beneficios y Nuestro Equipo (cuadros iguales)
+   Beneficios (Nosotros)
 ================================ */
-.services-grid,
-.team-grid {
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   gap: 30px;
   justify-items: center;
 }
 
-.service-card,
-.team-card {
+.service-card {
   background: #1a1a1a;
-  border: 2px solid var(--color-orange); /* borde naranja */
+  border: 2px solid var(--color-orange);
   border-radius: 12px;
   padding: 25px;
   text-align: center;
   transition: .3s;
-  width: 100%;
-  min-height: 180px; /* mismo alto para todos */
+  min-height: 180px; /* todos del mismo tamaño */
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.service-card:hover,
-.team-card:hover {
+
+.service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
 }
+
+.service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.service-card h3 {
+  color: var(--color-green);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--color-muted);
+}
+
 
 /* ================================
    Imágenes de equipo
