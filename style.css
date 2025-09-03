@@ -198,19 +198,19 @@ footer { background:#111;color:var(--color-muted);text-align:center;padding:20px
 .bienvenida-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
-  color: var(--color-green); /* verde aqua */
+  color: var(--color-green); /* Solo el título en verde */
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.bienvenida-texto p {
+.bienvenida-text {
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--color-green);
+  color: var(--color-light); /* Todo el texto en blanco */
+  text-align: justify;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
 }
-
-.text-green { color: var(--color-green); font-weight: 600; }
-.text-cyan { color: #00bfff; font-weight: 600; }
-.text-orange { color: var(--color-orange); font-weight: 600; }
 
 .bienvenida-card {
   background: #111;
