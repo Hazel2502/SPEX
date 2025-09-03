@@ -26,8 +26,18 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero">
+    <section
+      id="inicio"
+      class="hero"
+      style="background: url('access/ilustracion.png') center/cover"
+    >
       <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2 class="hero-title">Impulsamos el desarrollo de software de tu empresa</h2>
+        <p class="hero-subtitle">
+          Consultoría estratégica, desarrollo de software y soporte técnico con innovación salvadoreña.
+        </p>
+      </div>
       <div class="hero-shapes">
         <div class="shape circle s1"></div>
         <div class="shape square s2"></div>
@@ -36,19 +46,6 @@
         <div class="shape circle s5"></div>
         <div class="shape square s6"></div>
       </div>
-      <div class="hero-content">
-        <h2 class="hero-title" id="typing-text">Impulsamos el desarrollo de software de tu empresa</h2>
-        <p class="hero-subtitle">
-          Consultoría estratégica, desarrollo de software y soporte técnico con innovación salvadoreña.
-        </p>
-        <div class="hero-buttons">
-          <a href="servicios.html" class="btn-primary">Nuestros Servicios</a>
-          <a href="#contacto" class="btn-secondary">Contáctanos</a>
-        </div>
-      </div>
-      <div class="hero-illustration">
-        <img src="access/ilustracion.png" alt="Ilustración Desarrollo" />
-      </div>
     </section>
 
     <!-- Bienvenida -->
@@ -56,24 +53,20 @@
       <div class="container">
         <h2 class="section-title">Bienvenidos a SURVIX</h2>
         <p class="highlight">
-          En <strong>SURVIX S.A. de C.V.</strong> creemos en el poder de la tecnología para transformar empresas.  
-          Somos un equipo de jóvenes profesionales salvadoreños especializados en consultoría tecnológica, desarrollo de software y soporte técnico.  
-          Nuestro compromiso es brindar soluciones innovadoras, accesibles y efectivas que impulsen el crecimiento de las PYMES en El Salvador.
+          En <strong>SURVIX S.A. de C.V.</strong> creemos en el poder de la
+          tecnología para transformar empresas. Somos un equipo de jóvenes
+          profesionales salvadoreños especializados en
+          <span style="color: var(--color-green)">consultoría tecnológica</span>,
+          <span style="color: var(--color-blue)">desarrollo de software</span>
+          y <span style="color: var(--color-orange)">soporte técnico</span>.
         </p>
-      </div>
-    </section>
 
-    <!-- Tecnologías -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Tecnologías que utilizamos</h2>
-        <div class="tech-grid">
-          <div class="tech-card"><img src="access/html.png" alt="HTML5"></div>
-          <div class="tech-card"><img src="access/css.png" alt="CSS3"></div>
-          <div class="tech-card"><img src="access/js.png" alt="JavaScript"></div>
-          <div class="tech-card"><img src="access/python.png" alt="Python"></div>
-          <div class="tech-card"><img src="access/node.png" alt="Node.js"></div>
-          <div class="tech-card"><img src="access/mysql.png" alt="MySQL"></div>
+        <!-- Horario de atención -->
+        <div class="service-card" style="text-align:center; max-width:500px; margin:30px auto;">
+          <h3>🕒 Horario de Atención</h3>
+          <p>Lunes a Viernes: <strong>8:00 a.m. – 5:00 p.m.</strong></p>
+          <p>Sábados: <strong>9:00 a.m. – 1:00 p.m.</strong></p>
+          <p>Domingos y Feriados: <strong>Cerrado</strong></p>
         </div>
       </div>
     </section>
@@ -84,9 +77,18 @@
         <h2 class="section-title">Contáctanos</h2>
         <div class="contact-content">
           <div class="contact-info">
-            <p><strong>Dirección:</strong> Av. José Simeón Cañas #408, San Miguel, El Salvador</p>
-            <p><strong>Email:</strong> <a href="mailto:survix@gmail.com">survix@gmail.com</a></p>
-            <p><strong>Teléfono:</strong> <a href="tel:+50375808890">7580-8890</a></p>
+            <p>
+              <strong>Dirección:</strong> Av. José Simeón Cañas #408, San
+              Miguel, El Salvador
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:survix@gmail.com">survix@gmail.com</a>
+            </p>
+            <p>
+              <strong>Teléfono:</strong>
+              <a href="tel:+50375808890">7580-8890</a>
+            </p>
           </div>
           <div class="contact-form">
             <form id="contactForm">
@@ -102,7 +104,10 @@
 
     <!-- Footer -->
     <footer>
-      <p>© 2025 SURVIX S.A. de C.V. | Consultoría • Desarrollo de Software • Soporte Técnico</p>
+      <p>
+        © 2025 SURVIX S.A. de C.V. | Consultoría • Desarrollo de Software •
+        Soporte Técnico
+      </p>
     </footer>
 
     <script src="script.js"></script>
