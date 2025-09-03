@@ -85,7 +85,7 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
 @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
 
 .hero-content { position:relative; z-index:2; max-width:600px; }
-.hero-title {font-size: clamp(2rem, 5vw, 2.7rem);background: linear-gradient(90deg, #00ffc3, #00e5ff); -webkit-background-clip: text;-webkit-text-fill-color: transparent;margin-bottom: 20px;}
+.hero-title {font-size: clamp(2rem, 5vw, 2.7rem);color: var(--color-green);;margin-bottom: 20px;}
 .hero-subtitle { font-size:1.2rem; color:var(--color-muted); margin-bottom:30px; }
 .hero-buttons { display:flex; gap:15px; }
 .hero-illustration { z-index:2; position:relative; margin-left:40px; }
