@@ -198,7 +198,7 @@ footer { background:#111;color:var(--color-muted);text-align:center;padding:20px
 .bienvenida-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
-  color: #00e5d4; /* verde aqua */
+  color: var (--color-green); /* verde aqua */
   margin-bottom: 20px;
 }
 
