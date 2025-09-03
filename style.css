@@ -119,6 +119,44 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   margin: 10px auto 0;
   border-radius: 2px;
 }
+/* ================================
+   Tecnologías
+================================ */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px;
+  justify-items: center;
+}
+
+.tech-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1/1;
+  transition: .25s;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-orange);
+  box-shadow: 0 10px 24px rgba(0,0,0,.5);
+}
+
+.tech-card img {
+  width: 64%;
+  height: 64%;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: .25s;
+}
+
+.tech-card:hover img {
+  filter: none;
+  transform: scale(1.05);
+}
 
 /* ================================
    Beneficios y Nuestro Equipo (cuadros iguales)
