@@ -1,0 +1,363 @@
+/* ================================
+   Variables de colores
+================================ */
+:root {
+  --color-green: #00cc66;
+  --color-blue: #0080ff;
+  --color-orange: #ff6600;
+  --color-yellow: #f7c600;
+  --color-red: #e63946;
+  --color-dark: #0d0d0d;
+  --color-light: #f5f5f5;
+  --color-muted: #cccccc;
+}
+
+/* ================================
+   Reset y base
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--color-dark);
+  color: var(--color-light);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+/* ================================
+   Header
+================================ */
+header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  border-bottom: 3px solid var(--color-green);
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 45px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: var(--color-green);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--color-light);
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--color-green);
+  color: #fff;
+}
+
+/* ================================
+   Hero (solo index)
+================================ */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("Access/hero-fondo.png") center/cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: var(--color-green);
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--color-green);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #00e676;
+}
+
+.btn-secondary {
+  border: 2px solid var(--color-blue);
+  color: var(--color-blue);
+}
+
+.btn-secondary:hover {
+  background: var(--color-blue);
+  color: #fff;
+}
+
+/* ================================
+   Secciones
+================================ */
+.section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--color-green);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.highlight {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+/* ================================
+   Servicios / Beneficios
+================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+  color: var(--color-green);
+}
+
+.service-card p {
+  color: var(--color-muted);
+  margin-bottom: 15px;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.service-card li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--color-blue);
+  font-weight: bold;
+}
+
+/* ================================
+   Portafolio
+================================ */
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.software-item {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.software-item img {
+  width: 100%;
+  display: block;
+}
+
+.software-item p {
+  padding: 12px;
+  color: var(--color-light);
+  font-weight: 500;
+  text-align: center;
+}
+
+.software-item:hover {
+  transform: scale(1.03);
+}
+
+/* ================================
+   Contacto
+================================ */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+}
+
+.contact-form {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: var(--color-light);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: var(--color-green);
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #00e676;
+}
+
+/* ================================
+   Footer
+================================ */
+footer {
+  background: #111;
+  color: var(--color-muted);
+  text-align: center;
+  padding: 20px 0;
+  border-top: 3px solid var(--color-green);
+}
+
+/* ================================
+   Colores por página
+================================ */
+body.index { background: #0d0d0d; }
+body.quienes { background: #0b1f36; }     /* azul */
+body.servicios { background: #102d1e; }   /* verde oscuro */
+body.portafolio { background: #2d1a10; }  /* naranja oscuro */
+body.beneficios { background: #262626; }  /* gris elegante */
+body.privacidad { background: #2a0e12; }  /* rojo oscuro */
+
+/* ================================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+}
