@@ -185,29 +185,48 @@ footer { background:#111;color:var(--color-muted);text-align:center;padding:20px
   .hero-title { font-size:2rem;white-space:normal; }
 }
 
-/* Bienvenida en dos columnas */
-.grid-2 {
+/* ================================
+   Bienvenida
+================================ */
+.bienvenida-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
   align-items: center;
+  gap: 40px;
 }
 
-.horario-card {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 12px;
+.bienvenida-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #00e5d4; /* verde aqua */
+  margin-bottom: 20px;
+}
+
+.bienvenida-texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
   color: var(--color-light);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-  text-align: left;
-  transition: transform 0.3s ease;
 }
 
-.horario-card:hover {
-  transform: translateY(-5px);
+.text-green { color: var(--color-green); font-weight: 600; }
+.text-cyan { color: #00bfff; font-weight: 600; }
+.text-orange { color: var(--color-orange); font-weight: 600; }
+
+.bienvenida-card {
+  background: #111;
+  border: 2px solid #00bfff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0,191,255,.2);
 }
 
-.horario-card h3 {
+.bienvenida-card h3 {
   color: var(--color-green);
   margin-bottom: 15px;
 }
+
+.bienvenida-card p {
+  margin-bottom: 8px;
+  color: var(--color-light);
+}
+
