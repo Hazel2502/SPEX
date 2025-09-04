@@ -324,51 +324,51 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
    Fondo animado Portafolio
 ================================ */
 .portafolio-shapes {
-  position: fixed;   /* 🔥 fijo en toda la pantalla */
+  position: fixed;
   inset: 0;
   z-index: 0;
-  pointer-events: none; /* ✅ no bloquea clics ni scroll */
+  pointer-events: none;
   overflow: hidden;
 }
 
 .portafolio-shapes .shape {
   position: absolute;
-  opacity: 0.18; /* más visible */
-  animation: floatY 14s ease-in-out infinite;
+  opacity: 0.15;
+  animation: floatY 16s ease-in-out infinite;
 }
 
-/* 🔵 Círculo con gradiente azul-verde */
+/* 🔵 Círculo en el lado izquierdo */
 .portafolio-shapes .circle {
   border-radius: 50%;
-  width: 160px; height: 160px;
+  width: 180px; height: 180px;
   background: radial-gradient(circle, var(--color-blue), transparent);
-  top: 12%; left: 15%;
+  top: 20%; left: -60px;   /* fuera del centro */
   animation-delay: 0s;
 }
 
-/* 🟩 Cuadro con gradiente naranja */
+/* 🟩 Cuadro en el lado derecho */
 .portafolio-shapes .square {
-  width: 140px; height: 140px;
+  width: 160px; height: 160px;
   border-radius: 16px;
   background: linear-gradient(135deg, var(--color-orange), transparent);
-  bottom: 18%; right: 20%;
-  animation-delay: 2s;
+  bottom: 25%; right: -70px;   /* fuera del centro */
+  animation-delay: 3s;
 }
 
-/* 🔺 Triángulo sólido */
+/* 🔺 Triángulo al costado izquierdo */
 .portafolio-shapes .triangle {
   width: 0; height: 0;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  border-bottom: 140px solid var(--color-green);
-  top: 65%; left: 25%;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 150px solid var(--color-green);
+  bottom: 15%; left: -40px;   /* pegado al borde izquierdo */
   opacity: 0.12;
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 @keyframes floatY {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-25px); }
+  50% { transform: translateY(-30px); }
 }
 
 /* ================================
