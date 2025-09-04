@@ -320,8 +320,6 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   font-weight: 600;
   text-align: center;
 }
-
-
 /* ================================
    Fondo animado Portafolio
 ================================ */
@@ -335,39 +333,43 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
 
 .portafolio-shapes .shape {
   position: absolute;
-  opacity: 0.15;
-  background: linear-gradient(135deg, var(--color-blue), var(--color-green));
+  opacity: 0.18; /* más visible */
   animation: floatY 14s ease-in-out infinite;
 }
 
+/* 🔵 Círculo con gradiente azul-verde */
 .portafolio-shapes .circle {
   border-radius: 50%;
-  width: 120px; height: 120px;
-  top: 10%; left: 15%;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, var(--color-blue), transparent);
+  top: 12%; left: 15%;
   animation-delay: 0s;
 }
+
+/* 🟩 Cuadro con gradiente naranja */
 .portafolio-shapes .square {
-  width: 100px; height: 100px;
-  bottom: 20%; right: 20%;
-  border-radius: 12px;
+  width: 140px; height: 140px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--color-orange), transparent);
+  bottom: 18%; right: 20%;
   animation-delay: 2s;
 }
+
+/* 🔺 Triángulo sólido */
 .portafolio-shapes .triangle {
   width: 0; height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 100px solid var(--color-orange);
-  top: 60%; left: 25%;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 140px solid var(--color-green);
+  top: 65%; left: 25%;
+  opacity: 0.12;
   animation-delay: 4s;
 }
 
 @keyframes floatY {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-25px); }
 }
-
-
-
 
 /* ================================
    Privacidad
