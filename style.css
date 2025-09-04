@@ -269,6 +269,59 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
 .software-item:hover { transform:scale(1.03); }
 
 /* ================================
+   Portafolio (2 columnas con emojis)
+================================ */
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* siempre 2 columnas */
+  gap: 30px;
+  justify-items: center;
+}
+
+.software-item {
+  background: #1a1a1a;
+  border: 2px solid var(--color-orange);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: .3s;
+  width: 100%;
+  max-width: 450px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.software-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+.software-item .emoji {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.software-item img {
+  width: 80%;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+  background: #000;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.software-item p {
+  padding: 8px;
+  color: var(--color-light);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================================
    Privacidad
 ================================ */
 .privacy-list { list-style:none;padding:0;max-width:800px;margin:0 auto; }
