@@ -327,7 +327,7 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
 ================================ */
 .portafolio {
   position: relative;
-  overflow: hidden; /* evita que las formas se salgan */
+  overflow: hidden; /* mantiene dentro las shapes */
 }
 
 .portafolio::before {
@@ -338,7 +338,8 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
     radial-gradient(30rem 20rem at 10% 20%, rgba(255,102,0,.08), transparent 60%),
     radial-gradient(25rem 15rem at 90% 80%, rgba(0,204,102,.08), transparent 60%);
   animation: fondoGlow 12s ease-in-out infinite alternate;
-  z-index: 0; /* se queda detrás */
+  z-index: 0; 
+  pointer-events: none; /* ✅ ahora no bloquea el scroll */
 }
 
 @keyframes fondoGlow {
@@ -346,13 +347,13 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   100% { transform: scale(1.15); }
 }
 
-/* Objetos flotando */
 .portafolio .shape {
   position: absolute;
   opacity: 0.15;
   background: linear-gradient(135deg, var(--color-blue), var(--color-green));
   animation: floatY 14s ease-in-out infinite;
-  z-index: 0;
+  z-index: 0; 
+  pointer-events: none; /* ✅ no bloquea nada */
 }
 
 .portafolio .circle {
@@ -361,14 +362,12 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   top: 10%; left: 15%;
   animation-delay: 0s;
 }
-
 .portafolio .square {
   width: 100px; height: 100px;
   bottom: 20%; right: 20%;
   border-radius: 12px;
   animation-delay: 2s;
 }
-
 .portafolio .triangle {
   width: 0; height: 0;
   border-left: 60px solid transparent;
@@ -382,6 +381,7 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
 }
+
 
 
 /* ================================
