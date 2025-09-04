@@ -320,56 +320,6 @@ nav a:hover, nav a.active { background: var(--color-green); color:#fff; }
   font-weight: 600;
   text-align: center;
 }
-/* ================================
-   Fondo animado Portafolio
-================================ */
-.portafolio-shapes {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.portafolio-shapes .shape {
-  position: absolute;
-  opacity: 0.15;
-  animation: floatY 16s ease-in-out infinite;
-}
-
-/* 🔵 Círculo en el lado izquierdo */
-.portafolio-shapes .circle {
-  border-radius: 50%;
-  width: 180px; height: 180px;
-  background: radial-gradient(circle, var(--color-blue), transparent);
-  top: 20%; left: -60px;   /* fuera del centro */
-  animation-delay: 0s;
-}
-
-/* 🟩 Cuadro en el lado derecho */
-.portafolio-shapes .square {
-  width: 160px; height: 160px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--color-orange), transparent);
-  bottom: 25%; right: -70px;   /* fuera del centro */
-  animation-delay: 3s;
-}
-
-/* 🔺 Triángulo al costado izquierdo */
-.portafolio-shapes .triangle {
-  width: 0; height: 0;
-  border-left: 90px solid transparent;
-  border-right: 90px solid transparent;
-  border-bottom: 150px solid var(--color-green);
-  bottom: 15%; left: -40px;   /* pegado al borde izquierdo */
-  opacity: 0.12;
-  animation-delay: 5s;
-}
-
-@keyframes floatY {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-}
 
 /* ================================
    Privacidad
