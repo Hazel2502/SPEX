@@ -34,58 +34,38 @@
         En <strong>SURVIX</strong> garantizamos un servicio técnico confiable, disponible las 24 horas, con soluciones inmediatas para mantener tus sistemas funcionando de manera óptima.
       </p>
 
-      <!-- Horarios de atención -->
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>⏰ Horario de Atención</h3>
-          <p>Lunes a Viernes: 8:00 a.m. - 6:00 p.m.</p>
-          <p>Sábados: 9:00 a.m. - 1:00 p.m.</p>
-          <p>Emergencias 24/7 disponibles bajo contrato de soporte.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>📞 Canales de Contacto</h3>
-          <ul>
-            <li>Teléfono directo</li>
-            <li>Soporte remoto</li>
-            <li>Atención vía correo electrónico</li>
-            <li>Monitoreo preventivo</li>
-          </ul>
-        </div>
+      <!-- Formulario de tickets -->
+      <h3 style="margin-top:40px; color: var(--color-green); text-align:center;">📩 Crear un Ticket</h3>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xgvlpqgz" method="POST">
+          <input type="text" name="name" placeholder="Tu nombre" required />
+          <input type="email" name="email" placeholder="Tu correo electrónico" required />
+          <textarea name="issue" placeholder="Describe tu problema" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Enviar Ticket</button>
+        </form>
       </div>
 
-      <!-- Niveles de soporte -->
-      <h3 style="margin-top:40px; color: var(--color-green); text-align:center;">Niveles de Soporte</h3>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Nivel 1</h3>
-          <p>Resolución de problemas básicos: configuración de software, errores comunes, acceso a sistemas.</p>
-        </div>
-        <div class="service-card">
-          <h3>Nivel 2</h3>
-          <p>Soporte especializado: servidores, bases de datos, integraciones de sistemas.</p>
-        </div>
-        <div class="service-card">
-          <h3>Nivel 3</h3>
-          <p>Atención crítica: recuperación ante fallos graves, restauración de servicios, continuidad del negocio.</p>
-        </div>
+      <!-- Botón Emergencia -->
+      <div style="text-align:center; margin-top:30px;">
+        <button onclick="alert('🚨 Emergencia registrada. Un técnico se pondrá en contacto de inmediato.')" 
+                style="background:red; color:white; padding:15px 25px; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">
+          🚨 Emergencia 24/7
+        </button>
       </div>
 
-      <!-- Preguntas frecuentes -->
-      <h3 style="margin-top:40px; color: var(--color-blue); text-align:center;">Preguntas Frecuentes</h3>
-      <div class="services-grid">
-        <div class="service-card">
-          <h4>¿Atienden emergencias fuera de horario?</h4>
-          <p>Sí, con nuestro servicio de soporte 24/7.</p>
-        </div>
-        <div class="service-card">
-          <h4>¿Qué pasa si mi sistema se cae?</h4>
-          <p>Contamos con protocolos de recuperación rápida y respaldo de datos.</p>
-        </div>
-        <div class="service-card">
-          <h4>¿Incluyen mantenimiento preventivo?</h4>
-          <p>Sí, realizamos monitoreo constante para evitar fallos.</p>
-        </div>
+      <!-- Chat ficticio -->
+      <h3 style="margin-top:40px; color: var(--color-blue); text-align:center;">Asistente Virtual</h3>
+      <div class="chat-box">
+        <div class="chat-message user">💬 Cliente: Tengo problemas con el sistema.</div>
+        <div class="chat-message bot">🤖 SURVIX: Hemos registrado tu consulta. Un técnico revisará tu caso.</div>
+      </div>
+
+      <!-- Botón Chat en Vivo -->
+      <div style="text-align:center; margin-top:30px;">
+        <a href="#" onclick="Tawk_API.maximize();" 
+           style="background:#0080ff; color:#fff; padding:12px 20px; border-radius:6px; text-decoration:none; font-weight:600;">
+          💬 Abrir Chat en Vivo
+        </a>
       </div>
     </div>
   </section>
@@ -94,6 +74,19 @@
   <footer>
     <p>© 2025 SURVIX S.A. de C.V. | Soporte Técnico</p>
   </footer>
+
+  <!-- Script de Tawk.to -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68ba546cbd62a81921a97ec9/1j4btjidb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 
   <script src="script.js"></script>
 </body>
