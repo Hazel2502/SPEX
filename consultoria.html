@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Consultoría - SURVIX</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilo para FAQ tipo acordeón */
+    .faq-container {
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    .faq-item {
+      background: #1a1a1a;
+      margin-bottom: 10px;
+      border: 2px solid var(--color-green);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--color-green);
+    }
+    .faq-answer {
+      padding: 15px;
+      display: none;
+      color: var(--color-light);
+      border-top: 1px solid #333;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* Botón de asesor virtual */
+    .chat-btn {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      background: var(--color-green);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 25px;
+      text-align: center;
+      transition: .3s;
+    }
+    .chat-btn:hover {
+      background: #00e676;
+    }
+  </style>
 </head>
 <body class="consultoria">
   <!-- Header -->
@@ -45,22 +90,11 @@
         <div class="service-card">📈 Gestión de Proyectos</div>
       </div>
 
-      <!-- Metodología -->
-      <h3 class="subsection-title">Nuestra Metodología</h3>
-      <div class="services-grid">
-        <div class="service-card">1️⃣ Diagnóstico Inicial</div>
-        <div class="service-card">2️⃣ Propuesta Tecnológica</div>
-        <div class="service-card">3️⃣ Implementación</div>
-        <div class="service-card">4️⃣ Acompañamiento</div>
-      </div>
-
-      <!-- Chat ficticio -->
+      <!-- Botón para chat -->
       <h3 class="subsection-title">Asesor Virtual</h3>
-      <div class="chat-box">
-        <div class="chat-message user">💬 Cliente: Necesito digitalizar mis procesos de ventas.</div>
-        <div class="chat-message bot">🤖 SURVIX: Podemos crear una plataforma e-commerce integrada a tu inventario.</div>
-        <div class="chat-message user">💬 Cliente: ¿Pueden darme soporte en ciberseguridad?</div>
-        <div class="chat-message bot">🤖 SURVIX: Sí, implementamos sistemas de protección y monitoreo 24/7.</div>
+      <p style="text-align:center;">Habla con nuestro asistente en tiempo real.</p>
+      <div style="text-align:center;">
+        <a href="#" onclick="Tawk_API.maximize();" class="chat-btn">💬 Iniciar Chat en Vivo</a>
       </div>
 
       <!-- Casos de éxito -->
@@ -73,30 +107,25 @@
 
       <!-- Preguntas Frecuentes -->
       <h3 class="subsection-title">Preguntas Frecuentes</h3>
-      <div class="services-grid">
-        <div class="service-card">❓ ¿Qué tipo de empresas asesoramos?<br>👉 Desde PYMEs hasta grandes corporaciones.</div>
-        <div class="service-card">❓ ¿Puedo contratar consultoría puntual?<br>👉 Sí, ofrecemos servicios a la medida.</div>
-        <div class="service-card">❓ ¿Incluyen capacitación?<br>👉 Sí, entrenamos a tu equipo en nuevas tecnologías.</div>
-        <div class="service-card">❓ ¿Trabajan remoto?<br>👉 Sí, damos soporte y consultoría online y presencial.</div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">❓ ¿Qué tipo de empresas asesoramos?</div>
+          <div class="faq-answer">👉 Desde PYMEs hasta grandes corporaciones en múltiples sectores.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">❓ ¿Puedo contratar consultoría puntual?</div>
+          <div class="faq-answer">👉 Sí, ofrecemos servicios por proyecto o planes mensuales.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">❓ ¿Incluyen capacitación?</div>
+          <div class="faq-answer">👉 Sí, capacitamos a tu equipo para implementar las soluciones.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">❓ ¿Trabajan remoto?</div>
+          <div class="faq-answer">👉 Sí, ofrecemos consultoría tanto presencial como online.</div>
+        </div>
       </div>
 
-      <!-- Formulario de contacto -->
-      <h3 class="subsection-title">Solicita una Reunión</h3>
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xgvlpqgz" method="POST">
-          <input type="text" name="name" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu email" required />
-          <select name="tema" required>
-            <option value="">Selecciona un tema</option>
-            <option value="digitalizacion">Digitalización</option>
-            <option value="seguridad">Seguridad</option>
-            <option value="automatizacion">Automatización</option>
-            <option value="estrategia">Estrategia Empresarial</option>
-          </select>
-          <textarea name="message" placeholder="Cuéntanos sobre tu necesidad" rows="5" required></textarea>
-          <button type="submit" class="btn-primary">Enviar Solicitud</button>
-        </form>
-      </div>
     </div>
   </section>
 
@@ -120,7 +149,14 @@
   </script>
   <!--End of Tawk.to Script-->
 
-  <script src="script.js"></script>
+  <!-- Script para FAQ -->
+  <script>
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        q.parentElement.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
 
