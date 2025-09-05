@@ -51,13 +51,20 @@
         </div>
       </div>
 
-      <!-- Chat ficticio -->
+      <!-- Chat IA -->
       <h3 style="margin-top:40px; color: var(--color-green); text-align:center;">Asesor Virtual</h3>
-      <div class="chat-box">
-        <div class="chat-message user">💬 Cliente: Necesito digitalizar mis procesos de ventas.</div>
-        <div class="chat-message bot">🤖 SURVIX: Podemos crear una plataforma e-commerce integrada a tu inventario.</div>
-        <div class="chat-message user">💬 Cliente: ¿Pueden darme soporte en ciberseguridad?</div>
-        <div class="chat-message bot">🤖 SURVIX: Sí, implementamos sistemas de protección y monitoreo 24/7.</div>
+      <div class="chat-box" id="chatBox">
+        <div class="chat-message bot">🤖 SURVIX: ¡Hola! Soy tu asistente virtual. Pregúntame lo que quieras sobre consultoría tecnológica.</div>
+      </div>
+
+      <!-- Input de usuario -->
+      <div style="margin-top:20px; text-align:center;">
+        <input type="text" id="userInput" placeholder="Escribe tu consulta..." 
+          style="padding:10px; width:70%; border-radius:8px; border:none;">
+        <button onclick="sendMessage()" 
+          style="padding:10px 20px; border:none; border-radius:8px; background:var(--color-green); color:#fff; font-weight:bold; cursor:pointer;">
+          Enviar
+        </button>
       </div>
 
       <!-- Casos de éxito -->
@@ -84,6 +91,32 @@
     <p>© 2025 SURVIX S.A. de C.V. | Consultoría Tecnológica</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const chatBox = document.getElementById("chatBox");
+      const userText = input.value.trim();
+
+      if(userText === "") return;
+
+      // Mensaje del usuario
+      const userMsg = document.createElement("div");
+      userMsg.className = "chat-message user";
+      userMsg.textContent = "💬 Cliente: " + userText;
+      chatBox.appendChild(userMsg);
+
+      input.value = "";
+
+      // Respuesta automática simulada
+      setTimeout(() => {
+        const botMsg = document.createElement("div");
+        botMsg.className = "chat-message bot";
+        botMsg.textContent = "🤖 SURVIX: Gracias por tu consulta. Nuestro sistema inteligente está en desarrollo, pronto te daré respuestas personalizadas.";
+        chatBox.appendChild(botMsg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }, 800);
+    }
+  </script>
 </body>
 </html>
+
