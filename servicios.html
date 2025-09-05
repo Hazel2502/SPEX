@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soporte Técnico - SURVIX</title>
+  <title>Servicios - SURVIX</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="soporte">
-  <!-- Header -->
+<body class="servicios">
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -16,79 +15,112 @@
       </div>
       <nav>
         <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
+        <a href="servicios.html" class="active">Servicios</a>
         <a href="portafolio.html">Portafolio</a>
         <a href="consultoria.html">Consultoría</a>
-        <a href="soporte.html" class="active">Soporte Técnico</a>
+        <a href="soporte.html">Soporte Técnico</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="privacidad.html">Privacidad</a>
       </nav>
     </div>
   </header>
 
-  <!-- Sección de Soporte -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Soporte Técnico</h2>
-      <p class="highlight">
-        En <strong>SURVIX</strong> garantizamos un servicio técnico confiable, disponible las 24 horas, con soluciones inmediatas para mantener tus sistemas funcionando de manera óptima.
-      </p>
-
-      <!-- Formulario de tickets -->
-      <h3 style="margin-top:40px; color: var(--color-green); text-align:center;">📩 Crear un Ticket</h3>
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xgvlpqgz" method="POST">
-          <input type="text" name="name" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu correo electrónico" required />
-          <textarea name="issue" placeholder="Describe tu problema" rows="5" required></textarea>
-          <button type="submit" class="btn-primary">Enviar Ticket</button>
-        </form>
-      </div>
-
-      <!-- Botón Emergencia -->
-      <div style="text-align:center; margin-top:30px;">
-        <button onclick="alert('🚨 Emergencia registrada. Un técnico se pondrá en contacto de inmediato.')" 
-                style="background:red; color:white; padding:15px 25px; border:none; border-radius:8px; font-size:1rem; cursor:pointer;">
-          🚨 Emergencia 24/7
-        </button>
-      </div>
-
-      <!-- Chat ficticio -->
-      <h3 style="margin-top:40px; color: var(--color-blue); text-align:center;">Asistente Virtual</h3>
-      <div class="chat-box">
-        <div class="chat-message user">💬 Cliente: Tengo problemas con el sistema.</div>
-        <div class="chat-message bot">🤖 SURVIX: Hemos registrado tu consulta. Un técnico revisará tu caso.</div>
-      </div>
-
-      <!-- Botón Chat en Vivo -->
-      <div style="text-align:center; margin-top:30px;">
-        <a href="#" onclick="Tawk_API.maximize();" 
-           style="background:#0080ff; color:#fff; padding:12px 20px; border-radius:6px; text-decoration:none; font-weight:600;">
-          💬 Abrir Chat en Vivo
-        </a>
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <a href="consultoria.html">
+            <img src="access/consultoria.png" alt="Consultoría Tecnológica" class="service-img">
+          </a>
+          <h3>Consultoría Tecnológica</h3>
+          <p>Asesoría estratégica para apoyar la transformación digital de tu empresa.</p>
+          <ul>
+            <li>Análisis de procesos empresariales</li>
+            <li>Plan de transformación digital</li>
+            <li>Arquitectura de software</li>
+            <li>Seguridad informática</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <a href="portafolio.html">
+            <img src="access/desarrollo.png" alt="Desarrollo de Software" class="service-img">
+          </a>
+          <h3>Desarrollo de Software</h3>
+          <p>Diseño y desarrollo de aplicaciones web, móviles y sistemas a medida.</p>
+          <ul>
+            <li>Aplicaciones empresariales</li>
+            <li>Sistemas de gestión (ERP, CRM, RRHH)</li>
+            <li>Plataformas e-commerce</li>
+            <li>Aplicaciones móviles Android & iOS</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <a href="soporte.html">
+            <img src="access/soporte.png" alt="Soporte Técnico" class="service-img">
+          </a>
+          <h3>Soporte Técnico</h3>
+          <p>Mantenimiento continuo y asistencia para garantizar el correcto funcionamiento.</p>
+          <ul>
+            <li>Soporte remoto 24/7</li>
+            <li>Mantenimiento preventivo y correctivo</li>
+            <li>Instalación y configuración</li>
+            <li>Capacitación técnica</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Planes de Pago -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Planes de Pago</h2>
+      <p class="highlight">Soluciones accesibles para cada tipo de negocio</p>
+      <div class="services-grid">
+
+        <!-- Plan Básico -->
+        <div class="service-card">
+          <h3>💻 Plan Básico</h3>
+          <p><strong>$50 / mes</strong></p>
+          <ul>
+            <li>Consultoría inicial</li>
+            <li>Soporte remoto (horario laboral)</li>
+            <li>Mantenimiento preventivo</li>
+          </ul>
+        </div>
+
+        <!-- Plan Empresarial -->
+        <div class="service-card">
+          <h3>🏢 Plan Empresarial</h3>
+          <p><strong>$120 / mes</strong></p>
+          <ul>
+            <li>Consultoría + Estrategia Digital</li>
+            <li>Desarrollo de pequeñas aplicaciones</li>
+            <li>Soporte remoto extendido</li>
+          </ul>
+        </div>
+
+        <!-- Plan Premium -->
+        <div class="service-card">
+          <h3>🚀 Plan Premium</h3>
+          <p><strong>$200 / mes</strong></p>
+          <ul>
+            <li>Consultoría continua</li>
+            <li>Desarrollo de software a medida</li>
+            <li>Soporte remoto + presencial</li>
+            <li>Capacitación al personal</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 SURVIX S.A. de C.V. | Soporte Técnico</p>
+    <p>© 2025 SURVIX S.A. de C.V.</p>
   </footer>
-
-  <!-- Script de Tawk.to -->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/68ba546cbd62a81921a97ec9/1j4btjidb';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
+
 
