@@ -49,6 +49,37 @@
     .chat-btn:hover {
       background: #00e676;
     }
+
+    /* Bloque reunión */
+    .reunion-box {
+      margin: 40px auto;
+      padding: 25px;
+      background: #1a1a1a;
+      border: 2px solid var(--color-blue);
+      border-radius: 12px;
+      max-width: 700px;
+      text-align: center;
+    }
+    .reunion-box h3 {
+      color: var(--color-green);
+      margin-bottom: 12px;
+    }
+    .reunion-box p {
+      margin-bottom: 15px;
+      color: var(--color-light);
+    }
+    .reunion-box a {
+      display: inline-block;
+      padding: 12px 20px;
+      background: var(--color-green);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: .3s;
+    }
+    .reunion-box a:hover {
+      background: #00e676;
+    }
   </style>
 </head>
 <body class="consultoria">
@@ -88,6 +119,7 @@
         <div class="service-card">🔐 Seguridad Informática</div>
         <div class="service-card">🤖 Automatización con IA</div>
         <div class="service-card">📈 Gestión de Proyectos</div>
+        <div class="service-card">☁️ Migración a la Nube</div>
       </div>
 
       <!-- Botón para chat -->
@@ -124,6 +156,13 @@
           <div class="faq-question">❓ ¿Trabajan remoto?</div>
           <div class="faq-answer">👉 Sí, ofrecemos consultoría tanto presencial como online.</div>
         </div>
+      </div>
+
+      <!-- Solicita una reunión -->
+      <div class="reunion-box">
+        <h3>📅 Solicita una Reunión</h3>
+        <p>Agenda una cita con nuestros consultores para recibir una propuesta personalizada.</p>
+        <a href="mailto:survix@gmail.com">📨 Agendar Ahora</a>
       </div>
 
     </div>
