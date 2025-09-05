@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultoría - SURVIX</title>
+  <title>Portafolio - SURVIX</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="consultoria">
-  <!-- Header -->
+<body class="portafolio">
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -17,8 +16,8 @@
       <nav>
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
-        <a href="portafolio.html">Portafolio</a>
-        <a href="consultoria.html" class="active">Consultoría</a>
+        <a href="portafolio.html" class="active">Portafolio</a>
+        <a href="consultoria.html">Consultoría</a>
         <a href="soporte.html">Soporte Técnico</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="privacidad.html">Privacidad</a>
@@ -26,97 +25,47 @@
     </div>
   </header>
 
-  <!-- Sección Consultoría -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Consultoría Tecnológica</h2>
-      <p class="highlight">
-        Nuestro equipo de expertos te acompaña en cada paso de tu transformación digital, 
-        ayudándote a definir estrategias, optimizar procesos y aplicar tecnología para mejorar tu negocio.
-      </p>
-
-      <!-- Bloques de servicios -->
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>📊 Estrategia Empresarial</h3>
-          <p>Diseño de planes tecnológicos que se alinean con los objetivos de tu empresa.</p>
+      <h2 class="section-title">Portafolio</h2>
+      <p class="highlight">Algunos de los proyectos desarrollados por SURVIX:</p>
+      <div class="software-grid">
+        <div class="software-item">
+          <div class="emoji">🏢</div>
+          <img src="access/portafolio1.png" alt="Gestión Empresarial">
+          <p>Sistema de Gestión Empresarial</p>
         </div>
-        <div class="service-card">
-          <h3>💻 Digitalización</h3>
-          <p>Implementamos soluciones digitales que modernizan procesos y reducen costos.</p>
+        <div class="software-item">
+          <div class="emoji">🛒</div>
+          <img src="access/portafolio2.png" alt="E-commerce">
+          <p>Plataforma de E-Commerce</p>
         </div>
-        <div class="service-card">
-          <h3>🔐 Seguridad Informática</h3>
-          <p>Evaluamos riesgos, aplicamos medidas de protección y aseguramos la continuidad del negocio.</p>
+        <div class="software-item">
+          <div class="emoji">🎓</div>
+          <img src="access/portafolio3.png" alt="Educación">
+          <p>Aplicación Web Educativa</p>
         </div>
-      </div>
-
-      <!-- Chat IA -->
-      <h3 style="margin-top:40px; color: var(--color-green); text-align:center;">Asesor Virtual</h3>
-      <div class="chat-box" id="chatBox">
-        <div class="chat-message bot">🤖 SURVIX: ¡Hola! Soy tu asistente virtual. Pregúntame lo que quieras sobre consultoría tecnológica.</div>
-      </div>
-
-      <!-- Input de usuario -->
-      <div style="margin-top:20px; text-align:center;">
-        <input type="text" id="userInput" placeholder="Escribe tu consulta..." 
-          style="padding:10px; width:70%; border-radius:8px; border:none;">
-        <button onclick="sendMessage()" 
-          style="padding:10px 20px; border:none; border-radius:8px; background:var(--color-green); color:#fff; font-weight:bold; cursor:pointer;">
-          Enviar
-        </button>
-      </div>
-
-      <!-- Casos de éxito -->
-      <h3 style="margin-top:40px; color: var(--color-blue); text-align:center;">Casos de Éxito</h3>
-      <div class="services-grid">
-        <div class="service-card">
-          <h4>🏢 Pyme Local</h4>
-          <p>Optimización de procesos internos que aumentaron la productividad en un 30%.</p>
+        <div class="software-item">
+          <div class="emoji">🏥</div>
+          <img src="access/portafolio4.png" alt="Salud Digital">
+          <p>Plataforma de Salud Digital (Telemedicina)</p>
         </div>
-        <div class="service-card">
-          <h4>🛒 Tienda Online</h4>
-          <p>Implementación de plataforma e-commerce que duplicó sus ventas en 6 meses.</p>
+        <div class="software-item">
+          <div class="emoji">🌍</div>
+          <img src="access/portafolio5.png" alt="Turismo">
+          <p>Plataforma de Turismo y Reservas</p>
         </div>
-        <div class="service-card">
-          <h4>🏦 Empresa Financiera</h4>
-          <p>Fortalecimiento en seguridad informática reduciendo ataques cibernéticos en un 80%.</p>
+        <div class="software-item">
+          <div class="emoji">💰</div>
+          <img src="access/portafolio6.png" alt="Finanzas">
+          <p>Plataforma de Finanzas Personales</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 SURVIX S.A. de C.V. | Consultoría Tecnológica</p>
+    <p>© 2025 SURVIX S.A. de C.V.</p>
   </footer>
-
-  <script>
-    function sendMessage() {
-      const input = document.getElementById("userInput");
-      const chatBox = document.getElementById("chatBox");
-      const userText = input.value.trim();
-
-      if(userText === "") return;
-
-      // Mensaje del usuario
-      const userMsg = document.createElement("div");
-      userMsg.className = "chat-message user";
-      userMsg.textContent = "💬 Cliente: " + userText;
-      chatBox.appendChild(userMsg);
-
-      input.value = "";
-
-      // Respuesta automática simulada
-      setTimeout(() => {
-        const botMsg = document.createElement("div");
-        botMsg.className = "chat-message bot";
-        botMsg.textContent = "🤖 SURVIX: Gracias por tu consulta. Nuestro sistema inteligente está en desarrollo, pronto te daré respuestas personalizadas.";
-        chatBox.appendChild(botMsg);
-        chatBox.scrollTop = chatBox.scrollHeight;
-      }, 800);
-    }
-  </script>
 </body>
 </html>
-
