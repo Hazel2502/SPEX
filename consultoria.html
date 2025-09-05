@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio - SURVIX</title>
+  <title>Consultoría - SURVIX</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="portafolio">
+<body class="consultoria">
+  <!-- Header -->
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -16,8 +17,8 @@
       <nav>
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
-        <a href="portafolio.html" class="active">Portafolio</a>
-        <a href="consultoria.html">Consultoría</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="consultoria.html" class="active">Consultoría</a>
         <a href="soporte.html">Soporte Técnico</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="privacidad.html">Privacidad</a>
@@ -25,47 +26,101 @@
     </div>
   </header>
 
+  <!-- Sección Consultoría -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Portafolio</h2>
-      <p class="highlight">Algunos de los proyectos desarrollados por SURVIX:</p>
-      <div class="software-grid">
-        <div class="software-item">
-          <div class="emoji">🏢</div>
-          <img src="access/portafolio1.png" alt="Gestión Empresarial">
-          <p>Sistema de Gestión Empresarial</p>
-        </div>
-        <div class="software-item">
-          <div class="emoji">🛒</div>
-          <img src="access/portafolio2.png" alt="E-commerce">
-          <p>Plataforma de E-Commerce</p>
-        </div>
-        <div class="software-item">
-          <div class="emoji">🎓</div>
-          <img src="access/portafolio3.png" alt="Educación">
-          <p>Aplicación Web Educativa</p>
-        </div>
-        <div class="software-item">
-          <div class="emoji">🏥</div>
-          <img src="access/portafolio4.png" alt="Salud Digital">
-          <p>Plataforma de Salud Digital (Telemedicina)</p>
-        </div>
-        <div class="software-item">
-          <div class="emoji">🌍</div>
-          <img src="access/portafolio5.png" alt="Turismo">
-          <p>Plataforma de Turismo y Reservas</p>
-        </div>
-        <div class="software-item">
-          <div class="emoji">💰</div>
-          <img src="access/portafolio6.png" alt="Finanzas">
-          <p>Plataforma de Finanzas Personales</p>
-        </div>
+      <h2 class="section-title">Consultoría Tecnológica</h2>
+      <p class="highlight">
+        Nuestro equipo de expertos te acompaña en cada paso de tu transformación digital, 
+        ayudándote a definir estrategias, optimizar procesos y aplicar tecnología para mejorar tu negocio.
+      </p>
+
+      <!-- Áreas de especialización -->
+      <h3 class="subsection-title">Áreas de Especialización</h3>
+      <div class="services-grid">
+        <div class="service-card">📊 Estrategia Empresarial</div>
+        <div class="service-card">💻 Digitalización</div>
+        <div class="service-card">🔐 Seguridad Informática</div>
+        <div class="service-card">🤖 Automatización con IA</div>
+        <div class="service-card">📈 Gestión de Proyectos</div>
+      </div>
+
+      <!-- Metodología -->
+      <h3 class="subsection-title">Nuestra Metodología</h3>
+      <div class="services-grid">
+        <div class="service-card">1️⃣ Diagnóstico Inicial</div>
+        <div class="service-card">2️⃣ Propuesta Tecnológica</div>
+        <div class="service-card">3️⃣ Implementación</div>
+        <div class="service-card">4️⃣ Acompañamiento</div>
+      </div>
+
+      <!-- Chat ficticio -->
+      <h3 class="subsection-title">Asesor Virtual</h3>
+      <div class="chat-box">
+        <div class="chat-message user">💬 Cliente: Necesito digitalizar mis procesos de ventas.</div>
+        <div class="chat-message bot">🤖 SURVIX: Podemos crear una plataforma e-commerce integrada a tu inventario.</div>
+        <div class="chat-message user">💬 Cliente: ¿Pueden darme soporte en ciberseguridad?</div>
+        <div class="chat-message bot">🤖 SURVIX: Sí, implementamos sistemas de protección y monitoreo 24/7.</div>
+      </div>
+
+      <!-- Casos de éxito -->
+      <h3 class="subsection-title">Casos de Éxito</h3>
+      <div class="services-grid">
+        <div class="service-card">🏢 Pyme Local – Productividad +30%</div>
+        <div class="service-card">🛒 Tienda Online – Ventas duplicadas</div>
+        <div class="service-card">🏦 Empresa Financiera – Seguridad +80%</div>
+      </div>
+
+      <!-- Preguntas Frecuentes -->
+      <h3 class="subsection-title">Preguntas Frecuentes</h3>
+      <div class="services-grid">
+        <div class="service-card">❓ ¿Qué tipo de empresas asesoramos?<br>👉 Desde PYMEs hasta grandes corporaciones.</div>
+        <div class="service-card">❓ ¿Puedo contratar consultoría puntual?<br>👉 Sí, ofrecemos servicios a la medida.</div>
+        <div class="service-card">❓ ¿Incluyen capacitación?<br>👉 Sí, entrenamos a tu equipo en nuevas tecnologías.</div>
+        <div class="service-card">❓ ¿Trabajan remoto?<br>👉 Sí, damos soporte y consultoría online y presencial.</div>
+      </div>
+
+      <!-- Formulario de contacto -->
+      <h3 class="subsection-title">Solicita una Reunión</h3>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xgvlpqgz" method="POST">
+          <input type="text" name="name" placeholder="Tu nombre" required />
+          <input type="email" name="email" placeholder="Tu email" required />
+          <select name="tema" required>
+            <option value="">Selecciona un tema</option>
+            <option value="digitalizacion">Digitalización</option>
+            <option value="seguridad">Seguridad</option>
+            <option value="automatizacion">Automatización</option>
+            <option value="estrategia">Estrategia Empresarial</option>
+          </select>
+          <textarea name="message" placeholder="Cuéntanos sobre tu necesidad" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Enviar Solicitud</button>
+        </form>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 SURVIX S.A. de C.V.</p>
+    <p>© 2025 SURVIX S.A. de C.V. | Consultoría Tecnológica</p>
   </footer>
+
+  <!-- Tawk.to Chat -->
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68ba546cbd62a81921a97ec9/1j4btjidb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script src="script.js"></script>
 </body>
 </html>
+
